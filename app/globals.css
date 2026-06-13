@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --font-heading: var(--font-dm-serif), 'DM Serif Display Fallback', serif;
+  --font-sans: var(--font-dm-sans), 'DM Sans Fallback', sans-serif;
+  --font-serif: var(--font-dm-serif), 'DM Serif Display Fallback', serif;
+  --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
+
+  /* Brand palette */
+  --color-navy: #0d1b2a;
+  --color-teal: #028090;
+  --color-seafoam: #02c39a;
+  --color-offwhite: #f5f7f8;
+  --color-navy-muted: #5b6b78;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --shadow-card: 0 1px 2px rgba(13, 27, 42, 0.04), 0 8px 24px rgba(13, 27, 42, 0.06);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f5f7f8;
+  --foreground: #0d1b2a;
+  --card: #ffffff;
+  --card-foreground: #0d1b2a;
+  --primary: #028090;
+  --primary-foreground: #f5f7f8;
+  --muted: #eef1f3;
+  --muted-foreground: #5b6b78;
+  --border: #e2e7ea;
+  --input: #e2e7ea;
+  --ring: #028090;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'SOMA Health organizza la tua documentazione clinica e la rende condivisibile con i tuoi medici — in modo sicuro, semplice e immediato.',
   generator: 'v0.app',
   icons: {
-    icon: '/icon.svg',
+    icon: '/logo.ico',
   },
   openGraph: {
     title: 'SOMA Health',

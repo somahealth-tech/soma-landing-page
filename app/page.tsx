@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import { FileText, Share2, ShieldCheck, FolderOpen, Layers, Plug, Stethoscope, Building2 } from 'lucide-react'
 import { Reveal } from '@/components/reveal'
+import { HeroWordmark } from '@/components/hero-wordmark'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
@@ -16,10 +18,14 @@ const clinicians = [
   { icon: Plug, text: 'Integrazione con i tuoi strumenti esistenti' },
 ]
 
-const team = [
-  { name: 'Simona Obino', role: 'Medico, co-fondatrice' },
-  { name: 'Matteo Lai', role: 'Ingegnere biomedico, PhD, co-fondatore' },
-  { name: 'Maria Elena Lasiu', role: 'Product & UX, co-fondatrice' },
+// Per aggiungere una foto: salva l'immagine in /public/team/ e imposta
+// `photo: '/team/nome-file.jpg'`. Senza foto, viene mostrata l'iniziale.
+type TeamMember = { name: string; role: string; photo?: string }
+
+const team: TeamMember[] = [
+  { name: 'Simona Obino', role: 'Medico, co-fondatrice', photo: undefined },
+  { name: 'Matteo Lai', role: 'Ingegnere biomedico, PhD, co-fondatore', photo: undefined },
+  { name: 'Maria Elena Lasiu', role: 'Product & UX, co-fondatrice', photo: undefined },
 ]
 
 export default function Page() {
@@ -32,14 +38,12 @@ export default function Page() {
         <section className="px-6 py-24 sm:py-32">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
-              <h1 className="font-serif text-5xl leading-tight text-balance text-foreground sm:text-6xl">
-                La tua salute, tutta in un posto.
-              </h1>
+              <HeroWordmark />
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
-                SOMA Health organizza la tua documentazione clinica e la rende condivisibile con i
-                tuoi medici — in modo sicuro, semplice e immediato.
+              <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
+                La tua salute, tutta in un posto. SOMA Health organizza la tua documentazione clinica
+                e la rende condivisibile con i tuoi medici — in modo sicuro, semplice e immediato.
               </p>
             </Reveal>
             <Reveal delay={0.2} className="mt-10 flex flex-col items-center">
@@ -127,12 +131,24 @@ export default function Page() {
               {team.map((member, i) => (
                 <Reveal key={member.name} delay={0.1 * (i + 1)}>
                   <div className="h-full rounded-xl bg-card p-8 text-center shadow-[var(--shadow-card)]">
-                    <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-[var(--color-navy)] font-serif text-xl text-[var(--color-offwhite)]">
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')}
-                    </span>
+                    <div className="mx-auto size-24 overflow-hidden rounded-full bg-[var(--color-navy)]">
+                      {member.photo ? (
+                        <Image
+                          src={member.photo}
+                          alt={`Foto di ${member.name}`}
+                          width={96}
+                          height={96}
+                          className="size-full object-cover"
+                        />
+                      ) : (
+                        <span className="flex size-full items-center justify-center font-serif text-2xl text-[var(--color-offwhite)]">
+                          {member.name
+                            .split(' ')
+                            .map((n) => n[0])
+                            .join('')}
+                        </span>
+                      )}
+                    </div>
                     <h3 className="mt-6 text-lg font-semibold text-foreground">{member.name}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{member.role}</p>
                   </div>

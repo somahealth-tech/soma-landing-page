@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function SiteFooter() {
   return (
@@ -18,7 +19,15 @@ export function SiteFooter() {
           >
             somahealth.team@gmail.com
           </a>
-          <p>© {new Date().getFullYear()} SOMA Health. Tutti i diritti riservati.</p>
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+            <p>© {new Date().getFullYear()} SOMA Health. Tutti i diritti riservati.</p>
+            <Link
+              href="/privacy"
+              className="transition hover:text-[var(--color-offwhite)]"
+            >
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ const dmSerif = DM_Serif_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://somahealth.it'),
-  title: 'SOMA Health — La tua salute, tutta in un posto.',
+  title: 'SOMA Health',
   description:
     'SOMA Health organizza la tua documentazione clinica e la rende condivisibile con i tuoi medici — in modo sicuro, semplice e immediato.',
   generator: 'v0.app',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     icon: '/icon.svg',
   },
   openGraph: {
-    title: 'SOMA Health — La tua salute, tutta in un posto.',
+    title: 'SOMA Health',
     description:
       'SOMA Health organizza la tua documentazione clinica e la rende condivisibile con i tuoi medici — in modo sicuro, semplice e immediato.',
     type: 'website',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SOMA Health — La tua salute, tutta in un posto.',
+    title: 'SOMA Health',
     description:
       'SOMA Health organizza la tua documentazione clinica e la rende condivisibile con i tuoi medici.',
   },

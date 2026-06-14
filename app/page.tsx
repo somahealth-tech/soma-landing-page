@@ -121,11 +121,11 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Team */}
+        {/* Chi siamo */}
         <section id="team" className="bg-[var(--color-offwhite)] px-6 py-24 sm:py-32">
           <div className="mx-auto max-w-5xl">
             <Reveal>
-              <h2 className="text-center font-serif text-4xl text-foreground">Il team</h2>
+              <h2 className="text-center font-serif text-4xl text-foreground">Chi siamo</h2>
             </Reveal>
             <div className="mt-16 grid gap-6 sm:grid-cols-3">
               {team.map((member, i) => (

@@ -24,7 +24,7 @@ export function SiteHeader() {
             Per chi
           </a>
           <a href="#team" className="hidden transition hover:text-[var(--color-offwhite)] sm:inline">
-            Team
+            Chi siamo
           </a>
           <a
             href="#waitlist"

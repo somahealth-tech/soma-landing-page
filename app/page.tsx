@@ -23,9 +23,9 @@ const clinicians = [
 type TeamMember = { name: string; role: string; photo?: string }
 
 const team: TeamMember[] = [
-  { name: 'Simona Obino', role: 'Medico, co-fondatrice', photo: undefined },
-  { name: 'Matteo Lai', role: 'Ingegnere biomedico, PhD, co-fondatore', photo: undefined },
-  { name: 'Maria Elena Lasiu', role: 'Product & UX, co-fondatrice', photo: undefined },
+  { name: 'Simona Obino', role: 'Specializzanda Medicina di Base\nMaster Medicina Estetica\nEsperienza clinica internazionale', photo: '/team/Simo.jpg' },
+  { name: 'Matteo Lai', role: 'Ingegnere biomedico con\nPh.D. in Health and Technologies', photo: '/team/Matte.jpg' },
+  { name: 'Maria Elena Lasiu', role: 'Ricercatrice UX con 3+ esperienza in\nconsulenza e sviluppo prodotto\nLSE • Università Bocconi', photo: '/team/Mari.jpg' },
 ]
 
 export default function Page() {

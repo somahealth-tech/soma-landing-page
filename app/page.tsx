@@ -163,7 +163,7 @@ export default function Page() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <h2 className="font-serif text-4xl leading-tight text-balance text-foreground sm:text-5xl">
-                Vuoi essere tra i primi a usare SOMA Health? Non perderti la sua versione Beta e contattaci
+                Vuoi essere tra i primi a usare SOMA Health?
               </h2>
             </Reveal>
             <Reveal delay={0.15} className="mt-10 flex flex-col items-center">

@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "soma-skills": {
+      "source": {
+        "source": "github",
+        "repo": "somahealth-tech/soma-skills"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "soma-design-system@soma-skills": true
+  }
+}
